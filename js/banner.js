@@ -10,25 +10,25 @@ let activeIndex = 0; // the current page on the slider
 
 let movies = [
 	{
-		src: "images/marcas/ieg1.png",
+		src: "images/marcas/fil1.png",
 		href: "#",
 	},
 	{
-		src: "images/marcas/ieg2.png",
+		src: "images/marcas/fil2.png",
 		href: "#",
 	},
 
 	{
-		src: "images/marcas/ieg3.png",
+		src: "images/marcas/fil3.png",
 		href: "#",
 	},
     {
-		src: "images/marcas/ieg4.png",
+		src: "images/marcas/fil4.png",
 		href: "#",
 	},
 
 	{
-		src: "images/marcas/ieg5.png",
+		src: "images/marcas/fil5.png",
 		href: "#",
 	},
 	{

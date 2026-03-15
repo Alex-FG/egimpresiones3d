@@ -4429,13 +4429,20 @@ blockquote cite {
 	background: #956628;
 }
 
+.footer-classic .footer-inner-1 .row.row-40 {
+	display: flex;
+	align-items: center;
+}
+
 .footer-classic .footer-inner-1 h1, .footer-classic .footer-inner-1 h2, .footer-classic .footer-inner-1 h3, .footer-classic .footer-inner-1 h4, .footer-classic .footer-inner-1 h5, .footer-classic .footer-inner-1 h6, .footer-classic .footer-inner-1 [class^='heading-'] {
 	color: #292928;
 }
 
+/*logo footer*/
+
 .footer-inner-1 .contact-list img {
 	
-	max-width: 70%;
+	max-width: 50%;
 	
 }
 
@@ -4589,7 +4596,8 @@ blockquote cite {
     width: 100%;
     vertical-align: top;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
+    background: #fff;
     transition: transform 0.5s;
 }
 
