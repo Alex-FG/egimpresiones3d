@@ -1,0 +1,8 @@
+{
+  "useSmtp": false,
+  "host": "mail.servingenieria.ec",
+  "port": 465,
+  "username": "info@servingenieria.ec",
+  "password": "aHU3OJqs",
+  "recipientEmail": "info@servingenieria.ec,alexfarinangog@gmail.com"
+}
