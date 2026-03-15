@@ -4619,6 +4619,10 @@ blockquote cite {
 	text-align: right;
 }
 
+.prod-parrafo p {
+	font-weight: 700;
+}
+
 
 
 .widget-gallery {
