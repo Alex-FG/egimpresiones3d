@@ -7183,7 +7183,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-transparent.rd-navbar-static .rd-navbar-main-outer .rd-navbar-main-inner {
-	position: absolute;
+	position: relative;
 	left: 0;
 	top: 0;
 	right: 0;
@@ -7192,8 +7192,8 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-transparent.rd-navbar-static .rd-navbar-main-inner {
 	/*background-color: #29292875;*/
 
-	 background-color: rgba(41, 41, 40, 0.7);
-	/*background-color: #292928;*/
+	/* background-color: rgba(41, 41, 40, 0.7);*/
+	background-color: #292928;
 	
 
 }
@@ -7279,10 +7279,10 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-transparent.rd-navbar-static .list-lined > li:not(:last-child):after {
 	right: 7px;
 }
-
+/*margen barra navegacion pantalla grande*/
 @media (min-width: 1600px) {
 	.rd-navbar-transparent.rd-navbar-static .rd-navbar-main {
-		padding: 35px 0 38px;
+		padding: 20px 0 20px;
 	}
 	.rd-navbar-transparent.rd-navbar-static .rd-menu {
 		margin-top: 34px;
