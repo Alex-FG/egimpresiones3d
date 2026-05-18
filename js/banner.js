@@ -10,29 +10,86 @@ let activeIndex = 0; // the current page on the slider
 
 let movies = [
 	{
-		src: "images/marcas/fil1.png",
+		src: "images/marcas/White.png",
 		href: "#",
 	},
 	{
-		src: "images/marcas/fil2.png",
+		src: "images/marcas/Grey.png",
 		href: "#",
 	},
 
 	{
-		src: "images/marcas/fil3.png",
+		src: "images/marcas/black.png",
 		href: "#",
 	},
+	{
+		src: "images/marcas/fucsia.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/blue.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/red.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/orange.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/yellow2.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/wood.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/maple.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/brown.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/cyan.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/green.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/ovgreen.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/pink.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/pink2.png",
+		href: "#",
+	},
+	{
+		src: "images/marcas/nylon.png",
+		href: "#",
+	},
+	
     {
-		src: "images/marcas/fil4.png",
+		src: "images/marcas/skgr.png",
 		href: "#",
 	},
 
 	{
-		src: "images/marcas/fil5.png",
+		src: "images/marcas/beige.png",
 		href: "#",
 	},
 	{
-		src: "images/marcas/ieg6.png",
+		src: "images/marcas/yellow.png",
 		href: "#",
 	},
 	
@@ -127,5 +184,5 @@ btnRight.addEventListener("click", (e) => {
 //funcion para ejecutar auntomaticamente la funcion Derecha cada 4 seg
 setInterval(function () {
 	Derecha();
-}, 4000);
+}, 1500);
 

@@ -912,7 +912,7 @@
 					if (url = $this.attr("data-slide-bg")) {
 						$this.css({
 							"background-image": "url(" + url + ")",
-							"background-size": "cover"
+							"background-size": "contain"
 						})
 					}
 				}

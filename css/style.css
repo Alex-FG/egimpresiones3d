@@ -11898,7 +11898,7 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
 *
 *********************************/
 :root {
-	--movie-width: 16vw;
+	--movie-width: 12vw;
 	--movie-height: 150px;
 	--arrow-width: 30px;
 
@@ -12262,5 +12262,66 @@ ul.icono-social .linke:hover{
 	color: white;
 }
 
+/*colores*/
+.color-container{
+    width: 400px;
+}
 
+.colorsf{
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+	margin-bottom: 40px;
+	margin-left: 100px;
+	
+}
+
+.colorf{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Colores */
+.blanco{ background:#ffffff; }
+.gris-claro{ background:#e5e5e5; }
+.gris{ background:#bdbdbd; }
+.gris-oscuro{ background:#6e6e6e; }
+.negro{ background:#2c2c2c; }
+
+.azul{ background:#3d3df5; }
+.azul-cielo{ background:#87CEEB; }
+
+.rojo{ background:#ff5a5a; }
+.naranja{ background:#ffb36b; }
+.amarillo{ background:#fff27a; }
+
+.verde{ background:#28a745; }
+.verde-oliva{ background:#808000; }
+.verde-menta{ background:#98ff98; }
+
+.rosa{ background:#ff9ecb; }
+
+.beige{ background:#f5f5dc; }
+.marron{ background:#8b4513; }
+
+.cyan{ background:#00ffff; }
+.magenta{ background:#ff00ff; }
+
+/* colores tipo madera */
+.madera-maple{ background:#d6a77a; }
+.madera-natural{ background:#c68642; }
+.fucsia-blue{ background:#c100ff; }   /* mezcla entre azul y fucsia */
+.pink-gold{ background:#b76e79; }
+
+/* Color seleccionado 
+.selected-color{
+    margin-top:15px;
+    width:20px;
+    height:200px;
+    border-radius:50%;
+    background:#6be000;
+} */
 
