@@ -80,7 +80,7 @@ let movies = [
 	},
 	
     {
-		src: "images/marcas/skgr.png",
+		src: "images/marcas/skgr.jpg",
 		href: "#",
 	},
 
