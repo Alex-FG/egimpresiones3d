@@ -6533,6 +6533,11 @@ html.tablet .ui-to-top {
 	display: block;
 }
 
+/* Redes sociales del botón de 3 puntos: solo en móvil */
+.rd-navbar-static .rd-navbar-collapse {
+	display: none;
+}
+
 .rd-navbar-fixed .rd-navbar-collapse .list-inline > li + li {
 	margin-top: 10px;
 }
@@ -6571,7 +6576,7 @@ html.tablet .ui-to-top {
 .rd-navbar-fixed .rd-navbar-panel {
 	color: #96692b;
 	box-shadow: 0 0 22px -4px rgba(0, 0, 0, 0.17);
-	background: #ffffff;
+	background: #292928;
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
@@ -12114,6 +12119,18 @@ html .icon-sm {
 	color: #ffffff;
 }
 
+/* TikTok: Font Awesome 4 no lo incluye, se dibuja con una máscara SVG */
+.fa-tiktok:before {
+	content: "";
+	display: inline-block;
+	width: 0.85em;
+	height: 1em;
+	vertical-align: -0.1em;
+	background-color: currentColor;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121.2 121.2 0 0 0 1.9 22.2A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z'/%3E%3C/svg%3E") no-repeat center / contain;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121.2 121.2 0 0 0 1.9 22.2A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
 
 
 
@@ -12252,6 +12269,12 @@ ul.icono-social .insta:hover{
 	background: #bc2a8d;
 }
 
+ul.icono-social .tiktok:hover{
+	color: white;
+	border: #000000;
+	background: #000000;
+}
+
 ul.icono-social .linke:hover{
 	color: white;
 	border: #00a0dc;
@@ -12325,3 +12348,817 @@ ul.icono-social .linke:hover{
     background:#6be000;
 } */
 
+
+/* Página de política de privacidad */
+.politica {
+	max-width: 860px;
+	text-align: left;
+}
+
+.politica h4 {
+	margin-top: 30px;
+}
+
+.politica p,
+.politica-lista {
+	margin-top: 10px;
+}
+
+.politica-fecha {
+	font-size: 14px;
+	color: #82929c;
+}
+
+.politica-lista {
+	padding-left: 20px;
+	list-style: disc;
+}
+
+.politica-lista li {
+	display: list-item;
+	list-style: disc;
+}
+
+.politica-lista li + li {
+	margin-top: 6px;
+}
+
+.politica a,
+.checkbox-privacidad a {
+	color: #96692b;
+	text-decoration: underline;
+}
+
+.checkbox-privacidad {
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	padding-left: 0;
+}
+
+.checkbox-privacidad input[type="checkbox"] {
+	position: static;
+	flex-shrink: 0;
+	width: 18px;
+	height: 18px;
+	margin: 2px 0 0;
+	opacity: 1;
+	visibility: visible;
+	appearance: auto;
+	accent-color: #96692b;
+}
+
+.checkbox-privacidad {
+	position: relative;
+	margin-bottom: 14px;
+}
+
+.checkbox-privacidad .form-validation {
+	left: 26px;
+	right: auto;
+	top: 100%;
+}
+
+.link-privacidad {
+	color: inherit;
+	text-decoration: underline;
+	margin-left: 6px;
+}
+
+.link-privacidad:hover {
+	color: #faad3b;
+}
+
+/* Antispam del formulario: fuera de la vista de las personas */
+.campo-trampa {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* =====================================================================
+   MEJORAS DE DISEÑO (paleta del cliente: #96692b, #292928, #faad3b)
+   ===================================================================== */
+
+/* Tipografía Lato incluida en el sitio (antes dependía de tenerla instalada) */
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url("../fonts/lato/lato-latin-300-normal.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/lato/lato-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/lato/lato-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url("../fonts/lato/lato-latin-900-normal.woff2") format("woff2");
+}
+
+/* Carrusel principal: sombra en el texto para que se lea sobre la foto */
+.hero-principal h1,
+.hero-principal .lead {
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Carrusel de Nosotros: infografías completas, sin recortar */
+.cont-slider-nosotros .swiper-slide {
+	background-color: #292928;
+}
+
+/* La caja toma la forma de las infografías (3:2) en cualquier pantalla; antes
+   heredaba la altura del carrusel de inicio (40vw) y se cortaba a la mitad */
+.cont-slider-nosotros,
+.cont-slider-nosotros .swiper-container {
+	height: auto;
+	min-height: 0;
+	aspect-ratio: 3 / 2;
+}
+
+@media (max-width: 768px) {
+	.cont-slider-nosotros {
+		height: auto;
+	}
+}
+
+/* Imágenes de Servicios completas, sin cortar su texto */
+.box-image-small .item-image {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Botón de cotizar por WhatsApp en cada servicio */
+.boton-whatsapp {
+	margin-top: 20px;
+}
+
+.boton-whatsapp .mdi {
+	margin-right: 6px;
+}
+
+/* Cuadrícula de productos: varias columnas que ocupan todo el ancho */
+.galeria-prod {
+	grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+	width: 100%;
+	grid-gap: 24px;
+}
+
+.galeria-prod h4:empty,
+.galeria-prod p:empty {
+	display: none;
+}
+
+/* Título del carrusel de filamentos */
+.titulo-carrusel {
+	color: #96692b;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* Carrusel de filamentos: las imágenes conservan su proporción */
+.movie img {
+	object-fit: contain;
+}
+
+/* Footer: texto claro sobre el marrón (antes gris oscuro, poco contraste) */
+.footer-classic .footer-inner-1 {
+	color: #f5f1ea;
+}
+
+.footer-classic .footer-inner-1 h5 {
+	color: #ffffff;
+}
+
+/* Nosotros: Misión y Visión con el mismo tamaño que el texto principal */
+.list-lg .p-offset-1 {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+/* Contacto: más aire entre títulos y mapa a todo el ancho */
+.seccion-contacto h2 {
+	margin-bottom: 24px;
+}
+
+.seccion-contacto h5 {
+	margin-bottom: 10px;
+}
+
+.mapa-frame iframe {
+	width: 100%;
+	height: 320px;
+	border: 0;
+	border-radius: 10px;
+}
+
+/* =====================================================================
+   PÁGINA DE GALERÍA
+   ===================================================================== */
+.galeria-intro {
+	max-width: 760px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+
+.galeria-intro h2 {
+	color: #96692b;
+}
+
+.galeria-intro a {
+	color: #96692b;
+	font-weight: 700;
+}
+
+.galeria-boton {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.galeria-boton .fa-tiktok,
+.galeria-boton .fa-instagram {
+	margin-right: 6px;
+}
+
+/* Filtros por categoría */
+.galeria-filtros {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.galeria-filtro {
+	padding: 8px 18px;
+	border: 2px solid #96692b;
+	border-radius: 30px;
+	background: transparent;
+	color: #96692b;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.galeria-filtro:hover,
+.galeria-filtro[aria-pressed="true"] {
+	background: #96692b;
+	color: #ffffff;
+}
+
+/* Cuadrícula de productos */
+.galeria-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+	gap: 20px;
+}
+
+@media (max-width: 575px) {
+	.galeria-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+	}
+	.galeria-item-info {
+		padding: 8px 10px;
+	}
+	.galeria-item-cat {
+		font-size: 10px;
+	}
+	.galeria-item-titulo {
+		font-size: 14px;
+	}
+}
+
+.galeria-item {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	border-radius: 12px;
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	text-align: left;
+}
+
+.galeria-item img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	background: #ffffff;
+	transition: transform .4s;
+}
+
+.galeria-item:hover img,
+.galeria-item:focus-visible img {
+	transform: scale(1.06);
+}
+
+.galeria-item-info {
+	display: block;
+	padding: 12px 14px;
+	background: #292928;
+}
+
+.galeria-item-cat {
+	display: block;
+	font-size: 12px;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: #faad3b;
+}
+
+.galeria-item-titulo {
+	display: block;
+	margin-top: 2px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+/* Videos de TikTok: recuadro que carga el widget oficial al hacer clic */
+.galeria-videos {
+	background: #f5f1ea;
+}
+
+.tiktok-embed-wrap {
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+/* Varios videos insertados: uno al lado del otro */
+.tiktok-embed-wrap.tiktok-videos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+	max-width: 1100px;
+}
+
+.tiktok-videos .tiktok-embed {
+	width: 325px;
+	max-width: 100%;
+	margin: 0;
+}
+
+.tiktok-facade {
+	padding: 50px 24px;
+	border-radius: 14px;
+	background: #292928;
+	color: #f5f1ea;
+	text-align: center;
+}
+
+.tiktok-facade-icono {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	background: #96692b;
+	color: #ffffff;
+	font-size: 32px;
+}
+
+.tiktok-facade .big {
+	margin-top: 16px;
+}
+
+.tiktok-cargar {
+	margin-top: 20px;
+	background: #faad3b;
+	color: #292928;
+	border-radius: 30px;
+}
+
+.tiktok-cargar:hover {
+	background: #ffffff;
+	color: #292928;
+}
+
+.tiktok-aviso {
+	margin-top: 14px;
+	font-size: 13px;
+	color: #b9b9b2;
+}
+
+.tiktok-aviso a {
+	color: #faad3b;
+	text-decoration: underline;
+}
+
+/* Instagram */
+.insta-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 10px;
+}
+
+@media (max-width: 767px) {
+	.insta-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.insta-foto {
+	position: relative;
+	display: block;
+	aspect-ratio: 1 / 1;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.insta-foto img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.insta-icono {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(150, 105, 43, 0.85);
+	color: #ffffff;
+	font-size: 30px;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.insta-foto:hover .insta-icono {
+	opacity: 1;
+}
+
+/* Llamado a la acción */
+.galeria-cta {
+	text-align: center;
+	color: #ffffff;
+}
+
+.galeria-cta h3 {
+	color: #ffffff;
+}
+
+.galeria-cta .big {
+	margin-top: 10px;
+}
+
+.galeria-cta-boton {
+	margin-top: 20px;
+	background: #ffffff;
+	color: #96692b;
+	border-radius: 30px;
+}
+
+.galeria-cta-boton:hover {
+	background: #292928;
+	color: #ffffff;
+}
+
+/* Visor ampliado */
+.galeria-lightbox {
+	width: min(900px, 94vw);
+	max-height: 92vh;
+	padding: 0;
+	border: 0;
+	border-radius: 14px;
+	overflow: visible;
+	background: #ffffff;
+}
+
+.galeria-lightbox::backdrop {
+	background: rgba(41, 41, 40, 0.85);
+}
+
+.lightbox-contenido {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	align-items: center;
+	margin: 0;
+}
+
+.lightbox-img {
+	width: 100%;
+	max-height: 80vh;
+	object-fit: contain;
+	border-radius: 14px 0 0 14px;
+	background: #ffffff;
+}
+
+.lightbox-contenido figcaption {
+	padding: 30px;
+}
+
+.lightbox-cat {
+	font-size: 12px;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: #96692b;
+}
+
+.lightbox-titulo {
+	margin-top: 4px;
+	color: #292928;
+}
+
+.lightbox-desc {
+	margin-top: 10px;
+}
+
+.lightbox-whatsapp {
+	margin-top: 20px;
+}
+
+.lightbox-cerrar,
+.lightbox-nav {
+	position: absolute;
+	z-index: 2;
+	width: 44px;
+	height: 44px;
+	border: 0;
+	border-radius: 50%;
+	background: #292928;
+	color: #ffffff;
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.lightbox-cerrar {
+	top: -14px;
+	right: -14px;
+	background: #96692b;
+}
+
+.lightbox-nav {
+	top: 50%;
+	margin-top: -22px;
+}
+
+.lightbox-anterior {
+	left: -22px;
+}
+
+.lightbox-siguiente {
+	right: -22px;
+}
+
+.lightbox-cerrar:hover,
+.lightbox-nav:hover {
+	background: #faad3b;
+}
+
+@media (max-width: 767px) {
+	.lightbox-contenido {
+		grid-template-columns: 1fr;
+	}
+	.lightbox-img {
+		max-height: 50vh;
+		border-radius: 14px 14px 0 0;
+	}
+	.lightbox-contenido figcaption {
+		padding: 20px;
+	}
+	.lightbox-cerrar {
+		top: 8px;
+		right: 8px;
+	}
+	.lightbox-anterior {
+		left: 8px;
+	}
+	.lightbox-siguiente {
+		right: 8px;
+	}
+	.lightbox-nav {
+		top: 25vh;
+	}
+}
+
+/* =====================================================================
+   NOSOTROS: EQUIPO Y PROVEEDOR
+   ===================================================================== */
+.seccion-equipo h2,
+.seccion-proveedor h2 {
+	color: #96692b;
+}
+
+.seccion-equipo .row {
+	margin-top: 24px;
+}
+
+.equipo-miembro {
+	height: 100%;
+	padding: 26px;
+	border-radius: 14px;
+	background: #ffffff;
+	box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+	border-top: 4px solid #96692b;
+}
+
+.equipo-cabecera {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+
+.equipo-foto {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 110px;
+	height: 110px;
+	border: 4px solid #96692b;
+	border-radius: 50%;
+	background: #292928;
+	color: #faad3b;
+	font-size: 32px;
+	font-weight: 900;
+	object-fit: cover;
+}
+
+.equipo-nombre {
+	color: #292928;
+}
+
+.equipo-cargo {
+	margin-top: 4px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #96692b;
+}
+
+.equipo-bio {
+	margin-top: 18px;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+@media (max-width: 575px) {
+	.equipo-foto {
+		width: 84px;
+		height: 84px;
+		font-size: 26px;
+	}
+}
+
+/* Proveedor principal */
+.seccion-proveedor {
+	background: #f5f1ea;
+}
+
+.proveedor-imagen img {
+	display: block;
+	width: 100%;
+	max-width: 480px;
+	margin: 0 auto;
+	border-radius: 14px;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.proveedor-imagen {
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+.proveedor-imagen figcaption {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #82929c;
+	text-align: right;
+}
+
+.proveedor-etiqueta {
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: #96692b;
+}
+
+.seccion-proveedor h2 {
+	margin-top: 4px;
+}
+
+.proveedor-lema {
+	margin-top: 2px;
+	font-style: italic;
+	font-weight: 700;
+	color: #292928;
+}
+
+.seccion-proveedor .big {
+	margin-top: 14px;
+}
+
+.proveedor-lista {
+	margin-top: 20px;
+}
+
+.proveedor-lista li {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.proveedor-lista li + li {
+	margin-top: 14px;
+}
+
+.proveedor-lista li > span {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #96692b;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.proveedor-lista strong {
+	color: #292928;
+}
+
+.proveedor-beneficio {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-top: 24px;
+	padding: 16px 20px;
+	border-left: 4px solid #faad3b;
+	border-radius: 8px;
+	background: #292928;
+	color: #f5f1ea;
+}
+
+.proveedor-beneficio span {
+	font-size: 30px;
+	color: #faad3b;
+}
+
+.proveedor-beneficio strong {
+	color: #ffffff;
+}
+
+.proveedor-botones {
+	margin-top: 24px;
+}
+
+.proveedor-boton-sec {
+	border: 2px solid #96692b;
+	border-radius: 30px;
+	background: transparent;
+	color: #96692b;
+}
+
+.proveedor-boton-sec:hover {
+	background: #96692b;
+	color: #ffffff;
+}
+
+.equipo-intro {
+	max-width: 760px;
+	margin-top: 12px;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="es">
+  <head>
+     <title>Galería de productos | EG Impresiones 3D</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Galería de figuras, piezas, productos y filamentos impresos en 3D por EG Impresiones 3D en Quito. Pide uno igual o personalizado.">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    
+  </head>
+  <body>
+    <!--<div class="ie-panel"></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>Cargando...</p>
+      </div>
+    </div>-->
+    <div class="">
+      <header class="section page-header rd-navbar-transparent-wrap">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-transparent" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="44px" data-xl-stick-up-offset="44px" data-xxl-stick-up-offset="44px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse">
+              <ul class="list-inline social-list icono-social">
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook face" aria-label="Facebook" href="https://www.facebook.com/people/EG-Impresiones-3D/100083363168130/" target="_blank"></a></li>
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram insta" aria-label="Instagram" href="https://www.instagram.com/eg_impresiones_3d/" target="_blank"></a></li>
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-tiktok tiktok" aria-label="TikTok" href="https://www.tiktok.com/@eg_impresiones3d" target="_blank"></a></li>
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin-square linke" aria-label="LinkedIn" href="#" target="_blank"></a></li>
+              </ul>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main-inner">
+                <div class="rd-navbar-main">
+                  <!--RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!--RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!--RD Navbar Brand-->
+                    <div class="rd-navbar-brand">
+                      <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logoegi3d.png" alt="EG Impresiones 3D" width="146" height="22"/><img class="brand-logo-light" src="images/logoeg.png" alt="EG Impresiones 3D" width="155" height="22"/></a>
+                    </div>
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item "><a class="rd-nav-link" href="index.html">INICIO</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">NOSOTROS</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="servicios.html">SERVICIOS</a>
+                        </li>
+                        <li class="rd-nav-item active"><a class="rd-nav-link" href="galeria.html">GALERÍA</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">CONTACTO</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="rd-navbar-bg novi-background bg-image" style="background-image: url(images/banner1.jpg)"></div>
+      </header>
+      <!-- Breadcrumbs-->
+      <section class="breadcrumbs-custom bg-image novi-background bg-primary">
+        <div class="container">
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="index.html">INICIO</a></li>
+            <li class="active">GALERÍA</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Galería de productos (el contenido lo genera js/galeria.js)-->
+      <section class="section section-md galeria">
+        <div class="container">
+          <div class="galeria-intro">
+            <h2>Nuestros trabajos</h2>
+            <p class="big">Figuras, piezas, productos y filamentos que fabricamos con impresión 3D en filamento y resina. ¿Te gusta alguno? Toca la imagen y pide uno igual o personalizado.</p>
+          </div>
+          <div class="galeria-filtros" id="galeria-filtros" role="group" aria-label="Filtrar por categoría"></div>
+          <div class="galeria-grid" id="galeria-grid"></div>
+        </div>
+      </section>
+
+      <!-- Videos de TikTok-->
+      <section class="section section-md galeria-videos">
+        <div class="container">
+          <div class="galeria-intro">
+            <h2>Míralo en acción</h2>
+            <p class="big">Procesos de impresión, acabados y novedades de nuestro TikTok.</p>
+          </div>
+          <div class="tiktok-embed-wrap" id="tiktok-embed">
+            <div class="tiktok-facade">
+              <span class="tiktok-facade-icono fa-tiktok" aria-hidden="true"></span>
+              <p class="big">Mira nuestros últimos videos sin salir de la página.</p>
+              <button class="button tiktok-cargar" id="tiktok-cargar" type="button">Cargar videos de TikTok</button>
+              <p class="tiktok-aviso">Al cargarlos, TikTok puede usar cookies. <a href="privacidad.html">Más información</a></p>
+            </div>
+          </div>
+          <div class="galeria-boton">
+            <a class="button button-primary boton-contacto" href="https://www.tiktok.com/@eg_impresiones3d" target="_blank" rel="noopener"><span class="fa-tiktok"></span> Ver más en TikTok</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instagram-->
+      <section class="section section-md galeria-instagram">
+        <div class="container">
+          <div class="galeria-intro">
+            <h2>Síguenos en Instagram</h2>
+            <p class="big"><a href="https://www.instagram.com/eg_impresiones_3d/" target="_blank" rel="noopener">@eg_impresiones_3d</a></p>
+          </div>
+          <div class="insta-grid" id="insta-grid"></div>
+          <div class="galeria-boton">
+            <a class="button button-primary boton-contacto" href="https://www.instagram.com/eg_impresiones_3d/" target="_blank" rel="noopener"><span class="fa-instagram"></span> Seguir en Instagram</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Llamado a la acción-->
+      <section class="section section-md bg-primary galeria-cta">
+        <div class="container">
+          <h3>¿Tienes una idea? La imprimimos en 3D</h3>
+          <p class="big">Envíanos una foto, un boceto o tu archivo STL y te cotizamos sin compromiso.</p>
+          <a class="button galeria-cta-boton" href="https://api.whatsapp.com/send?phone=593985926602&text=Hola,%20tengo%20una%20idea%20y%20quiero%20cotizar%20una%20impresi%C3%B3n%203D." target="_blank" rel="noopener"><span class="mdi mdi-whatsapp"></span> Cotizar por WhatsApp</a>
+        </div>
+      </section>
+
+      <!-- Visor ampliado de la galería-->
+      <dialog class="galeria-lightbox" id="galeria-lightbox" aria-label="Producto ampliado">
+        <button class="lightbox-cerrar" type="button" aria-label="Cerrar">&times;</button>
+        <button class="lightbox-nav lightbox-anterior" type="button" aria-label="Anterior">&#8249;</button>
+        <figure class="lightbox-contenido">
+          <img class="lightbox-img" src="" alt="">
+          <figcaption>
+            <span class="lightbox-cat"></span>
+            <h4 class="lightbox-titulo"></h4>
+            <p class="lightbox-desc"></p>
+            <a class="button button-primary boton-contacto lightbox-whatsapp" href="#" target="_blank" rel="noopener"><span class="mdi mdi-whatsapp"></span> Pedir uno similar</a>
+          </figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-siguiente" type="button" aria-label="Siguiente">&#8250;</button>
+      </dialog>
+
+  <footer class="section footer-classic">
+        <div class="footer-inner-1">
+          <div class="container cont-centrar">
+            <div class="row row-40">
+              <div class="col-md-5 col-lg-4 wow fadeInRight ">
+                
+                <ul class="contact-list font-weight-bold">
+                  <li>
+                    <img src="images/logoegi3d.png" alt="Logo EG Impresiones 3D">
+
+                    <ul class="social-list ">
+                      <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-whatsapp" aria-label="WhatsApp" href="https://api.whatsapp.com/send?phone=593985926602&text=Hola,%20he%20visitado%20su%20sitio%20web%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20%20acerca%20de%20sus%20servicios."></a></li>
+                      <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" aria-label="Facebook" href="https://www.facebook.com/people/EG-Impresiones-3D/100083363168130/" target="_blank"></a></li>
+                      <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" aria-label="Instagram" href="https://www.instagram.com/eg_impresiones_3d/" target="_blank"></a></li>
+                      <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-tiktok" aria-label="TikTok" href="https://www.tiktok.com/@eg_impresiones3d" target="_blank"></a></li>
+                      <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin-square" aria-label="LinkedIn" href="#" target="_blank"></a></li>
+                    </ul>
+
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                  <li>
+                   
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4 wow fadeInUp">
+               
+                <div class="row row-5 justify-content-center">
+                  <div class="col-sm-6">
+                    <ul class="footer-list big lista-footer ">
+                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="about.html">Nosotros</a></li>
+                      <li><a href="servicios.html">Servicios</a></li>
+                      <li><a href="galeria.html">Galería</a></li>
+                      <li><a href="contacts.html">Contacto</a></li>                                
+                    </ul>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-3 wow fadeInLeft">
+                <h5>Contáctanos</h5>
+                <div class="row row-5 align-items-center text-center justify-content-center">
+
+                  <div class="unit unit-spacing-xs ">
+                      
+                    <div class="unit-left ">
+                      <div class=" icono novi-icon mdi mdi-map-marker"></div>
+                    </div>
+                    <div class="unit-body big lista-footer unit-left"><a class=" big" href="https://www.google.com/maps?q=-0.3323170,-78.5562517" target="_blank">Quito - Ecuador</a></div>
+                    
+                  </div>
+
+                  <div class="unit unit-spacing-xs ">
+                    <div class="unit-left">
+                      <div class="icono novi-icon mdi mdi-phone"></div>
+                    </div>
+                    <div class="unit-body big lista-footer"><a href="tel:+593985926602">0985926602</a></div>
+                  </div>
+
+                  <div class="unit unit-spacing-xs ">
+                    <div class="unit-left">
+                      <div class="icono novi-icon mdi mdi-email"></div>
+                    </div>
+                    <div class="unit-body lista-footer">
+                      <a class=" big" href="mailto:santiagodjs1@hotmail.com">santiagodjs1@hotmail.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-inner-2">
+          <div class="container cont-centrar">
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. Todos los derechos reservados. <a class="link-privacidad" href="privacidad.html">Política de privacidad</a></p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/galeria.js"></script>
+  </body>
+</html>

@@ -2,11 +2,6 @@
 const slider = document.querySelector(".sliderc");
 const btnLeft = document.getElementById("moveLeft");
 const btnRight = document.getElementById("moveRight");
-const indicators = document.querySelectorAll(".indicator");
-
-let baseSliderWidth = slider.offsetWidth;
-let activeIndex = 0; // the current page on the slider
-
 
 let movies = [
 	{
@@ -97,92 +92,52 @@ let movies = [
 ];
 
 
-
-
-// Fill the slider with all the movies in the "movies" array
+// Llena el carrusel con dos copias de la lista. Al llegar al final de la
+// primera copia se salta sin animación al mismo punto de la segunda, así el
+// bucle parece infinito sin agregar más imágenes a la página.
+const template = document.getElementById("movie0");
 function populateSlider() {
-
 	movies.forEach((image) => {
-		// Clone the initial movie thats included in the html, then replace the image with a different one
-		const newMovie = document.getElementById("movie0");
-		let clone = newMovie.cloneNode(true);
-		let img = clone.querySelector("img");
-		let a = clone.querySelector("a");
-		img.src = image.src;
-		a.href = image.href;
-		slider.insertBefore(clone, slider.childNodes[slider.childNodes.length - 1]);
+		const clone = template.cloneNode(true);
+		clone.removeAttribute("id");
+		clone.querySelector("img").src = image.src;
+		clone.querySelector("a").href = image.href;
+		slider.appendChild(clone);
 	});
 }
 
 populateSlider();
 populateSlider();
+template.remove();
 
-// delete the initial movie in the html
-const initialMovie = document.getElementById("movie0");
-initialMovie.remove();
-
-// Update the indicators that show which page we're currently on
-function updateIndicators(index) {
-	indicators.forEach((indicator) => {
-		indicator.classList.remove("active");
-	});
-	let newActiveIndicator = indicators[index];
-	newActiveIndicator.classList.add("active");
+// Ancho de una copia completa de la lista
+function setWidth() {
+	const items = slider.querySelectorAll(".movie");
+	return items[movies.length].offsetLeft - items[0].offsetLeft;
 }
 
-// Scroll Left button
-btnLeft.addEventListener("click", (e) => {
-	let movieWidth = document.querySelector(".movie").getBoundingClientRect()
-		.width;
-	let scrollDistance = movieWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+function movieWidth() {
+	return slider.querySelector(".movie").getBoundingClientRect().width;
+}
 
-	slider.scrollBy({
-		top: 0,
-		left: -scrollDistance,
-		behavior: "smooth",
-	});
-	activeIndex = (activeIndex - 1) % 3;
-	console.log(activeIndex);
-	updateIndicators(activeIndex);
-});
+function jumpTo(left) {
+	slider.scrollTo({ top: 0, left: left, behavior: "instant" });
+}
 
 function Derecha() {
-	let movieWidth = document.querySelector(".movie").getBoundingClientRect()
-		.width;
-	let scrollDistance = movieWidth * 1; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
-
-	// if we're on the last page
-	if (activeIndex == 2) {
-		// duplicate all the items in the slider (this is how we make 'looping' slider)
-		populateSlider();
-		slider.scrollBy({
-			top: 0,
-			left: +scrollDistance,
-			behavior: "smooth",
-		});
-		activeIndex = 0;
-		updateIndicators(activeIndex);
-	} else {
-		slider.scrollBy({
-			top: 0,
-			left: +scrollDistance,
-			behavior: "smooth",
-		});
-		activeIndex = (activeIndex + 1) % 3;
-		console.log(activeIndex);
-		updateIndicators(activeIndex);
-	}
+	const loop = setWidth();
+	if (slider.scrollLeft >= loop) jumpTo(slider.scrollLeft - loop);
+	slider.scrollBy({ top: 0, left: movieWidth(), behavior: "smooth" });
 }
 
-// Scroll Right button
+function Izquierda() {
+	const step = movieWidth();
+	if (slider.scrollLeft - step < 0) jumpTo(slider.scrollLeft + setWidth());
+	slider.scrollBy({ top: 0, left: -step, behavior: "smooth" });
+}
 
-btnRight.addEventListener("click", (e) => {
-	Derecha()
-});
+btnLeft.addEventListener("click", Izquierda);
+btnRight.addEventListener("click", Derecha);
 
-
-//funcion para ejecutar auntomaticamente la funcion Derecha cada 4 seg
-setInterval(function () {
-	Derecha();
-}, 1500);
-
+// Avanza automáticamente cada 1,5 s
+setInterval(Derecha, 1500);

@@ -912,7 +912,9 @@
 					if (url = $this.attr("data-slide-bg")) {
 						$this.css({
 							"background-image": "url(" + url + ")",
-							"background-size": "contain"
+							"background-size": $this.attr("data-slide-bg-size") || "cover",
+							"background-position": "center",
+							"background-repeat": "no-repeat"
 						})
 					}
 				}
@@ -989,13 +991,13 @@
 		if (plugins.rdMailForm.length) {
 			var i, j, k,
 				msg = {
-					'MF000': 'Exitosamente enviado!',
-					'MF001': 'Recipients are not set!',
-					'MF002': 'Form will not work locally!',
-					'MF003': 'Please, define email field in your form!',
-					'MF004': 'Please, define type of your form!',
-					'MF254': 'Something went wrong with PHPMailer!',
-					'MF255': 'Aw, snap! Something went wrong.'
+					'MF000': '¡Mensaje enviado! Te responderemos pronto.',
+					'MF001': 'El formulario aún no está configurado.',
+					'MF002': 'El formulario no funciona en local.',
+					'MF003': 'Ingresa un correo electrónico válido.',
+					'MF004': 'Falta el tipo de formulario.',
+					'MF254': 'No se pudo enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp.',
+					'MF255': 'Ocurrió un error. Intenta de nuevo o escríbenos por WhatsApp.'
 				};
 
 			for (i = 0; i < plugins.rdMailForm.length; i++) {
